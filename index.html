@@ -3,14 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/main.css">
   
   <title>Newsletter</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container flex flex-col md:flex-row-reverse md:p-4 m-auto max-w-7xl h-screen gap-6 "> <!---->
 
+    <!-- -----------Image section------------- -->
+    <div class="image md:w-1/2 md:my-auto md:h-full"> <!--  -->
+      <!-- mobile image -->
+      <img src="./assets/images/illustration-sign-up-mobile.svg" alt="" class="md:hidden min-w-full rounded-b-sm">
+      <!-- desktop image -->
+      <img src="./assets/images/illustration-sign-up-desktop.svg" alt="" class="hidden md:block rounded max-h-full w-full">
+    </div>
+
+    <!-- -------------Text Section--------------- -->
+    <div class="text md:w-1/2 my-auto p-6 md:p-12">
+      <!-- ---heading--- -->
+      <h2 class="text-5xl md:text-6xl font-bold text-darkSlateGrey mb-6">Stay updated!</h2>
+      <p class="text-charcoalGrey text-xl mb-6 font-semibold">
+        Join 60,000+ product managers receiving monthly updates on:
+      </p>
+
+      <!-- -----list---- -->
+      <div class="list mb-10">
+        <ul class="space-y-3">
+          <li class="flex space-x-4 items-center">
+            <img src="./assets/images/icon-list.svg" alt="list icon">
+            <p class="text-charcoalGrey font-semibold">Product discovery and building what matters</p>
+          </li>
+          <li class="flex space-x-4 items-center">
+            <img src="./assets/images/icon-list.svg" alt="list icon">
+            <p class="text-charcoalGrey font-semibold">Measuring to ensure updates are a success</p>
+          </li>
+          <li class="flex space-x-4 items-center">
+            <img src="./assets/images/icon-list.svg" alt="list icon">
+            <p class="text-charcoalGrey font-semibold">And much more!</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ----email area---- -->
+      <div class="mb-6">
+        <div class="flex justify-between mb-2">
+          <p class="font-bold text-chocolateGrey">
+            Email address
+          </p>
+          <p id="emailError" class="font-bold text-tomato hidden">
+            Valid email required
+          </p>
+        </div>
+        <input type="email" id="emailInput" class="w-full border-2 rounded-md p-4  focus:border-black" placeholder="email@company.com">
+      </div>
+
+      <!-- ----submit button---- -->
+      <button type="submit" class="rounded-md p-4 text-center w-full bg-darkSlateGrey hover:bg-gradient-to-r from-rose-500 to-orange-600 font-bold text-white">Subscribe to a monthly newsletter</button>
+    </div>
   </div>
 </body>
 </html>
