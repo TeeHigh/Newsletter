@@ -12,7 +12,7 @@
   <div class="container flex flex-col md:flex-row-reverse md:p-4 m-auto max-w-7xl h-screen gap-6 "> <!---->
 
     <!-- -----------Image section------------- -->
-    <div class="image md:w-1/2 md:my-auto md:h-full"> <!--  -->
+    <div class="image md:w-1/2 md:my-auto lg:h-full "> <!--  -->
       <!-- mobile image -->
       <img src="./assets/images/illustration-sign-up-mobile.svg" alt="" class="md:hidden min-w-full rounded-b-sm">
       <!-- desktop image -->
@@ -55,11 +55,37 @@
             Valid email required
           </p>
         </div>
-        <input type="email" id="emailInput" class="w-full border-2 rounded-md p-4  focus:border-black" placeholder="email@company.com">
+        <input type="email" id="emailInput" class="w-full border-2 rounded-md p-4  focus:border-black " placeholder="email@company.com"> <!--border-tomato bg-red-100-->
       </div>
 
       <!-- ----submit button---- -->
-      <button type="submit" class="rounded-md p-4 text-center w-full bg-darkSlateGrey hover:bg-gradient-to-r from-rose-500 to-orange-600 font-bold text-white">Subscribe to a monthly newsletter</button>
+      <button type="submit" class="rounded-md p-4 text-center w-full bg-darkSlateGrey hover:bg-gradient-to-r from-rose-500 to-orange-600 font-bold text-white mb-4">Subscribe to a monthly newsletter</button>
+    </div>
+  </div>
+
+  <!-- ----------modal window------------ -->
+  <div class="fixed top-0 left-0 bg-[rgba(0,0,0,.3)] h-full w-full hidden items-center justify-center">
+
+    <!-- -----------pop up----------- -->
+    <div class="box bg-white w-full h-full opacity-100 p-8 md:p-12 md:h-auto md:max-w-md md:rounded-xl grid overflow-y-auto"> 
+      <div class=" my-auto ">
+        <!-- -----------tick icon------------ -->
+        <img src="./assets/images/icon-success.svg" class="mb-8 md:mb-6" alt="">
+
+        <!-- -------heading------- -->
+        <h2 class="text-4xl text-darkSlateGrey font-bold mb-10 md:mb-6">
+          Thanks for Subcribing!
+        </h2>
+
+        <!-- -------text------- -->
+        <p class="text-charcoalGrey font-semibold mb-[60%] md:mb-12 text-lg md">
+          A confirmation email has been sent to <span class="email font-bold"></span>. Please open it and click the button inside to confirm your subscription.
+        </p>
+
+        <button type="submit" class="rounded-md p-4 px-14 text-center w-full bg-darkSlateGrey hover:bg-gradient-to-r from-rose-500 to-orange-600 font-semibold  text-white  md:mb-0">
+          Dismiss message
+        </button>
+      </div>
     </div>
   </div>
 </body>
