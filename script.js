@@ -44,8 +44,6 @@ submitEvent.addEventListener('click', (e) =>{
         openModal()
         submittedEmail.textContent = inputValue
 
-        emailInput.textContent = ''
-
         removeInvalidAlert()
     }
     else{
@@ -55,4 +53,5 @@ submitEvent.addEventListener('click', (e) =>{
 
 dismiss.addEventListener('click', function(){
     closeModal()
+    emailInput.value = ''
 })
