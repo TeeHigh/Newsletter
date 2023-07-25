@@ -30,6 +30,7 @@ Users should be able to:
 
 ### Screenshot
 
+![Code script](./code-screenshot.png)
 ![Desktop view](./newsletter-desktop.png)
 ![Mobile view](./newsletter-mobile.png)
 ![Mobile view with frame](./newsletter-mobile-frame.png)
