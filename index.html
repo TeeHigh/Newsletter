@@ -59,12 +59,12 @@
       </div>
 
       <!-- ----submit button---- -->
-      <button type="submit" class="rounded-md p-4 text-center w-full bg-darkSlateGrey hover:bg-gradient-to-r from-rose-500 to-orange-600 font-bold text-white mb-4">Subscribe to a monthly newsletter</button>
+      <button type="submit" id="subscribe" class="rounded-md p-4 text-center w-full bg-darkSlateGrey hover:bg-gradient-to-r from-rose-500 to-orange-600 font-bold text-white mb-4">Subscribe to a monthly newsletter</button>
     </div>
   </div>
 
   <!-- ----------modal window------------ -->
-  <div class="fixed top-0 left-0 bg-[rgba(0,0,0,.3)] h-full w-full hidden items-center justify-center">
+  <div id="modal" class="fixed top-0 left-0 bg-[rgba(0,0,0,.3)] h-full w-full hidden items-center justify-center">
 
     <!-- -----------pop up----------- -->
     <div class="box bg-white w-full h-full opacity-100 p-8 md:p-12 md:h-auto md:max-w-md md:rounded-xl grid overflow-y-auto"> 
@@ -82,11 +82,13 @@
           A confirmation email has been sent to <span class="email font-bold"></span>. Please open it and click the button inside to confirm your subscription.
         </p>
 
-        <button type="submit" class="rounded-md p-4 px-14 text-center w-full bg-darkSlateGrey hover:bg-gradient-to-r from-rose-500 to-orange-600 font-semibold  text-white  md:mb-0">
+        <button type="submit" id="dismiss" class="rounded-md p-4 px-14 text-center w-full bg-darkSlateGrey hover:bg-gradient-to-r from-rose-500 to-orange-600 font-semibold  text-white  md:mb-0">
           Dismiss message
         </button>
       </div>
     </div>
   </div>
+
+  <script src="./script.js"></script>
 </body>
 </html>
