@@ -2,10 +2,10 @@ let emailError = document.querySelector('#emailError')
 let emailInput = document.querySelector('#emailInput')
 let modal = document.querySelector('#modal')
 let submitEvent = document.querySelector('#subscribe')
+let submittedEmail = document.querySelector('.email')
 let dismiss = document.querySelector('#dismiss')
-let userEmail = document.querySelector('.email')
-let inputValue = emailInput.value
-let validated = false 
+
+let validated = true 
 
 
 function addInvalidAlert(){
@@ -34,23 +34,66 @@ function closeModal(){
     modal.classList.remove('flex')
 }
 
-let newFunc = function(){
 
-    if(inputValue == 0){
-        validated = false
-        addInvalidAlert()
-    }
 
+// emailInput.addEventListener('input', function(){
+//     console.log(validated)
+    
+//     removeInvalidAlert()
+// })
+
+// submitEvent.addEventListener('click', (e) =>{
+//     e.preventDefault()
+
+//     function newFunc(){
+//         if(inputValue == ''){
+//             validated = false
+//             addInvalidAlert()
+//         }
+//         else{
+//             validated = true
+//             removeInvalidAlert()
+//             console.log(validated)
+//         }
+//     }
+
+//     newFunc()
+//     console.log(validated)
+//     if(validated){
+//         openModal()
+        
+//     }
+    
+// })
+
+// dismiss.addEventListener('click', function(){
+//     closeModal()
+// })
+
+// console.log(inputValue)
+
+function validation(email){
+    // const regEx = (/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4]$/)
+    const regEx = (/^[^\s@]+@[^\s@]+\.[^\s@]+$/)
+
+    return regEx.test(email)
 }
 
-emailInput.addEventListener('input', function(){
-    removeInvalidAlert()
+submitEvent.addEventListener('click', (e) =>{
+    e.preventDefault()
+    const inputValue = emailInput.value.trim()
+
+    if(validation(inputValue)){
+        openModal()
+        submittedEmail.value = ''
+
+        removeInvalidAlert()
+    }
+    else{
+        addInvalidAlert()
+    }
 })
 
-submitEvent.addEventListener('click', () =>{
-    newFunc()
-    console.log(validated)
-    if(validated){
-        openModal()
-    }
+dismiss.addEventListener('click', function(){
+    closeModal()
 })
