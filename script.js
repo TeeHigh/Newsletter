@@ -2,11 +2,8 @@ let emailError = document.querySelector('#emailError')
 let emailInput = document.querySelector('#emailInput')
 let modal = document.querySelector('#modal')
 let submitEvent = document.querySelector('#subscribe')
-let submittedEmail = document.querySelector('.email')
 let dismiss = document.querySelector('#dismiss')
-
-let validated = true 
-
+let submittedEmail = document.querySelector('.email')
 
 function addInvalidAlert(){
     emailError.classList.remove('hidden')
@@ -34,58 +31,20 @@ function closeModal(){
     modal.classList.remove('flex')
 }
 
-
-
-// emailInput.addEventListener('input', function(){
-//     console.log(validated)
-    
-//     removeInvalidAlert()
-// })
-
-// submitEvent.addEventListener('click', (e) =>{
-//     e.preventDefault()
-
-//     function newFunc(){
-//         if(inputValue == ''){
-//             validated = false
-//             addInvalidAlert()
-//         }
-//         else{
-//             validated = true
-//             removeInvalidAlert()
-//             console.log(validated)
-//         }
-//     }
-
-//     newFunc()
-//     console.log(validated)
-//     if(validated){
-//         openModal()
-        
-//     }
-    
-// })
-
-// dismiss.addEventListener('click', function(){
-//     closeModal()
-// })
-
-// console.log(inputValue)
-
 function validation(email){
-    // const regEx = (/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4]$/)
     const regEx = (/^[^\s@]+@[^\s@]+\.[^\s@]+$/)
-
     return regEx.test(email)
 }
 
 submitEvent.addEventListener('click', (e) =>{
     e.preventDefault()
-    const inputValue = emailInput.value.trim()
+    let inputValue = emailInput.value.trim()
 
     if(validation(inputValue)){
         openModal()
-        submittedEmail.value = ''
+        submittedEmail.textContent = inputValue
+
+        emailInput.textContent = ''
 
         removeInvalidAlert()
     }
