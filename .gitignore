@@ -15,7 +15,6 @@
 .DS_Store
 .prettierignore
 
-README-template.md
 node_modules
 package.json
 package-lock.json
