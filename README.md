@@ -59,6 +59,8 @@ Included javascript and creating website UI
 
 I learnt the mobile first workflow with tailwind and javascript regular expression which was used in the email validation and can be used to test input for validation.
 
+I learnt how to create a modal window.
+
 I also learnt how to break functions into different components.
 
 ## Author
