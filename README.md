@@ -32,6 +32,7 @@ Users should be able to:
 
 ![Desktop view](./newsletter-desktop.png)
 ![Mobile view](./newsletter-mobile.png)
+![Mobile view with frame](./newsletter-mobile-frame.png)
 
 ### Links
 
