@@ -781,6 +781,10 @@ video {
   font-weight: 600;
 }
 
+.font-medium{
+  font-weight: 500;
+}
+
 .text-charcoalGrey{
   --tw-text-opacity: 1;
   color: hsl(235 18% 26% / var(--tw-text-opacity));
