@@ -10,7 +10,7 @@ module.exports = {
         grey: 'hsl(231, 7%, 60%)'
       },
       fontFamily:{
-        'primary': ['Roboto']
+        'primary': ['Roboto, sans-serif']
       }
     },
   },

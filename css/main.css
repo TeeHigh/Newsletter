@@ -750,7 +750,7 @@ video {
 }
 
 .font-primary{
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
 }
 
 .text-4xl{
@@ -779,10 +779,6 @@ video {
 
 .font-semibold{
   font-weight: 600;
-}
-
-.font-medium{
-  font-weight: 500;
 }
 
 .text-charcoalGrey{
@@ -821,6 +817,65 @@ video {
 
 .hover\:bg-gradient-to-r:hover{
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.hover\:shadow-2xl:hover{
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:shadow-current:hover{
+  --tw-shadow-color: currentColor;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.hover\:before\:absolute:hover::before{
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.hover\:before\:left-0:hover::before{
+  content: var(--tw-content);
+  left: 0px;
+}
+
+.hover\:before\:top-0:hover::before{
+  content: var(--tw-content);
+  top: 0px;
+}
+
+.hover\:before\:-z-10:hover::before{
+  content: var(--tw-content);
+  z-index: -10;
+}
+
+.hover\:before\:h-full:hover::before{
+  content: var(--tw-content);
+  height: 100%;
+}
+
+.hover\:before\:w-full:hover::before{
+  content: var(--tw-content);
+  width: 100%;
+}
+
+.hover\:before\:from-rose-500:hover::before{
+  content: var(--tw-content);
+  --tw-gradient-from: #f43f5e var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(244 63 94 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.hover\:before\:to-orange-600:hover::before{
+  content: var(--tw-content);
+  --tw-gradient-to: #ea580c var(--tw-gradient-to-position);
+}
+
+.hover\:before\:blur-\[5px\]:hover::before{
+  content: var(--tw-content);
+  --tw-blur: blur(5px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .focus\:border-black:focus{
