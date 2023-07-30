@@ -12,7 +12,7 @@
   <div class="container flex flex-col md:flex-row-reverse md:p-4 m-auto max-w-7xl h-screen gap-6 "> <!---->
 
     <!-- -----------Image section------------- -->
-    <div class="image md:w-1/2 md:my-auto lg:h-full "> <!--  -->
+    <div class="image md:w-1/2 md:my-auto sm:h-[45em] lg:h-full flex items-center"> <!--  -->
       <!-- mobile image -->
       <img src="./assets/images/illustration-sign-up-mobile.svg" alt="" class="md:hidden min-w-full rounded-b-sm">
       <!-- desktop image -->
@@ -22,8 +22,8 @@
     <!-- -------------Text Section--------------- -->
     <div class="text md:w-1/2 my-auto p-6 md:p-12">
       <!-- ---heading--- -->
-      <h2 class="text-5xl md:text-6xl font-bold text-darkSlateGrey mb-6">Stay updated!</h2>
-      <p class="text-charcoalGrey text-xl mb-6 font-semibold">
+      <h2 class="text-5xl md:text-7xl font-primary font-bold text-darkSlateGrey mb-6">Stay updated!</h2>
+      <p class="text-charcoalGrey font-primary text-xl mb-6 ">
         Join 60,000+ product managers receiving monthly updates on:
       </p>
 
@@ -32,15 +32,15 @@
         <ul class="space-y-3">
           <li class="flex space-x-4 items-center">
             <img src="./assets/images/icon-list.svg" alt="list icon">
-            <p class="text-charcoalGrey font-semibold">Product discovery and building what matters</p>
+            <p class="text-charcoalGrey font-primary font-semibold">Product discovery and building what matters</p>
           </li>
           <li class="flex space-x-4 items-center">
             <img src="./assets/images/icon-list.svg" alt="list icon">
-            <p class="text-charcoalGrey font-semibold">Measuring to ensure updates are a success</p>
+            <p class="text-charcoalGrey font-primary font-semibold">Measuring to ensure updates are a success</p>
           </li>
           <li class="flex space-x-4 items-center">
             <img src="./assets/images/icon-list.svg" alt="list icon">
-            <p class="text-charcoalGrey font-semibold">And much more!</p>
+            <p class="text-charcoalGrey font-primary font-semibold">And much more!</p>
           </li>
         </ul>
       </div>
@@ -48,18 +48,18 @@
       <!-- ----email area---- -->
       <div class="mb-6">
         <div class="flex justify-between mb-2">
-          <p class="font-bold text-chocolateGrey">
+          <p class="font-primary font-bold text-darkSlateGrey">
             Email address
           </p>
-          <p id="emailError" class="font-bold text-tomato hidden">
+          <strong id="emailError" class="font-primary text-tomato hidden">
             Valid email required
-          </p>
+          </strong>
         </div>
         <input type="email" id="emailInput" class="w-full border-2 rounded-md p-4  focus:border-black " placeholder="email@company.com"> 
       </div>
 
       <!-- ----submit button---- -->
-      <button type="submit" id="subscribe" class="rounded-md p-4 text-center w-full bg-darkSlateGrey hover:bg-gradient-to-r from-rose-500 to-orange-600 font-bold text-white mb-4">Subscribe to a monthly newsletter</button>
+      <button type="submit" id="subscribe" class="rounded-md p-4 text-center w-full bg-darkSlateGrey hover:bg-gradient-to-r from-rose-500 to-orange-600 text-white mb-4 font-primary">Subscribe to a monthly newsletter</button>
     </div>
   </div>
 
@@ -73,17 +73,17 @@
         <img src="./assets/images/icon-success.svg" class="mb-8 md:mb-6" alt="">
 
         <!-- -------heading------- -->
-        <h2 class="text-4xl text-darkSlateGrey font-bold mb-10 md:mb-6">
+        <h2 class="text-4xl text-darkSlateGrey font-primary font-bold mb-10 md:mb-6">
           Thanks for Subcribing!
         </h2>
 
         <!-- -------text------- -->
-        <p class="text-charcoalGrey font-semibold mb-[60%] md:mb-12 text-lg md">
+        <p class="text-charcoalGrey font-primary font-semibold mb-[60%] md:mb-12 text-lg md">
           A confirmation email has been sent to <strong class="email"></strong>. Please open it and click the button inside to confirm your subscription.
         </p>
 
         <!-- ----dismissal button---- -->
-        <button type="submit" id="dismiss" class="rounded-md p-4 px-14 text-center w-full bg-darkSlateGrey hover:bg-gradient-to-r from-rose-500 to-orange-600 font-semibold  text-white  md:mb-0">
+        <button type="submit" id="dismiss" class="rounded-md p-4 px-14 text-center w-full bg-darkSlateGrey hover:bg-gradient-to-r from-rose-500 to-orange-600 font-primary font-semibold  text-white  md:mb-0">
           Dismiss message
         </button>
       </div>
@@ -93,3 +93,5 @@
   <script src="./script.js"></script>
 </body>
 </html>
+
+<!--  hover:before:absolute hover:before:w-full hover:before:h-full hover:before:-z-10 hover:before:gradient-to-r hover:before:from-rose-500 hover:before:to-orange-600 hover:before:left-0 hover:before:top-0 hover:before:blur-[5px] font-bold-->
